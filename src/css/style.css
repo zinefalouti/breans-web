@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background-color: #131313;
+}
+
+.Header {
+  padding: 40px 0px 20px 0px;
+  margin: 0px;
+}
+.Header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.Header ul li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.Header ul li:Hover {
+  color: #A6918F;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+.Header ul .Active {
+  font-weight: 700;
+}
+.Header .Logo {
+  width: 93%;
+}
+@media (max-width: 768px) {
+  .Header .Logo {
+    width: 100%;
+  }
+}
+.Header button {
+  padding: 10px 20px 10px 20px;
+  margin: 0px;
+  background-color: #A6918F;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  color: #131313;
+}
+.Header button:hover {
+  background-color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+@media (max-width: 1280px) {
+  .Header button {
+    width: 100%;
+  }
+}
+.Header button img {
+  width: 20px;
+}
+.Header .MobileMenu {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.Hero {
+  background-image: url("../img/gridbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 60px 60px 60px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .Hero {
+    padding: 60px 20px 60px 20px;
+  }
+}
+.Hero h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 3%;
+}
+.Hero h1 span {
+  color: #A6918F;
+  font-weight: 900;
+}
+.Hero h2 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.Hero h3 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #454545;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 30px;
+}
+
+.Hero-Action {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+.Hero-Action button {
+  min-width: 190px;
+}
+
+.btn-main {
+  padding: 10px 20px 10px 20px;
+  margin: 0px;
+  background-color: #A6918F;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  color: #131313;
+}
+.btn-main:hover {
+  background-color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+.btn-main img {
+  width: 20px;
+}
+
+.btn-secondary {
+  background-color: none;
+  border: 2px solid #A6918F;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #A6918F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+.btn-secondary:hover {
+  background-color: #A6918F;
+  color: #131313;
+  transition: 0.3s ease-in-out;
+}
+.btn-secondary:hover img {
+  background-color: #131313;
+}
+.btn-secondary img {
+  width: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: #ffffff;
+}
+h1 span {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #636363;
+}
+
+.Hero-Banner {
+  background-image: url("../img/bgbrain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 40px;
+  margin-top: 60px;
+  border-radius: 10px;
+  box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  text-align: center;
+}
+.Hero-Banner h1 {
+  font-size: 32px;
+}
+.Hero-Banner .Hero-Version {
+  margin-top: 20px;
+  background-color: #131313;
+  padding: 10px 30px 10px 30px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.Hero-Banner .Hero-Version img {
+  width: 40px;
+}
+.Hero-Banner .Hero-Version h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #454545;
+  text-transform: uppercase;
+}
+.Hero-Banner .Hero-Version h3 span {
+  font-weight: 900;
+  color: #A6918F;
+}
+
+.Block {
+  background-color: #070707;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(166, 145, 143, 0.16);
+  margin-top: 30px;
+  box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+}
+.Block:hover {
+  border: 2px solid rgba(166, 145, 143, 0.33);
+  transition: 0.3s ease-in-out;
+}
+.Block .Block-Head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.Block .Block-Head h3 {
+  font-size: 12px;
+  font-weight: 900;
+  color: #636363;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+.Block .Block-Head img {
+  width: 30px;
+}
+.Block h1 {
+  font-size: 24px;
+}
+.Block .Block-Icon {
+  margin: 16px 0px 16px 0px;
+  width: 50%;
+  height: auto;
+}
+.Block p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #636363;
+  margin-bottom: 30px;
+}
+
+.Link-Btn {
+  padding: 10px 20px 10px 20px;
+  margin: 0px;
+  background-color: #A6918F;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  color: #131313;
+}
+.Link-Btn:hover {
+  background-color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+.Link-Btn img {
+  width: 20px;
+}
+
+.HSectTitle {
+  margin-top: 40px;
+}
+.HSectTitle h3 {
+  font-size: 12px;
+  font-weight: 900;
+  color: #636363;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.HSectTitle h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+/* Background */
+pre {
+  background-color: #070707;
+  color: #d4d4d4; /* default text color */
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(166, 145, 143, 0.16);
+  box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+}
+pre:hover {
+  border: 2px solid rgba(166, 145, 143, 0.33);
+  transition: 0.3s ease-in-out;
+}
+
+.HSectImg {
+  width: 100%;
+}
+
+.PreFooter {
+  background-image: url("../img/footerbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+  margin: 90px 0px 30px 0px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+}
+
+.Footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Footer img {
+  width: 30%;
+  height: auto;
+}
+.Footer .Copyright {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.Footer .Copyright span {
+  font-weight: 300;
+}
+
+.InnerHero {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.InnerHero h1 span {
+  color: #A6918F;
+}
+.InnerHero p {
+  font-size: 20px;
+}
+.InnerHero .InnerHeroAction {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.InnerHero button {
+  min-width: 210px;
+}
+
+hr {
+  border-color: #242424;
+}
+
+.BackBtn {
+  width: 50px;
+}
+.BackBtn:hover {
+  scale: 1.13;
+  transition: 0.3s ease-in-out;
+}
+
+.DocTable {
+  background-color: #070707;
+  padding: 40px;
+  border-radius: 10px;
+  border: 2px solid rgba(166, 145, 143, 0.16);
+  margin-top: 30px;
+  box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  position: sticky;
+}
+.DocTable ul li {
+  margin-bottom: 30px;
+}
+.DocTable ul li a:hover {
+  font-weight: 900;
+  transition: 0.3s ease-in-out;
+}
+.DocTable ul li button:hover {
+  font-weight: 900;
+  transition: 0.3s ease-in-out;
+}
+.DocTable ul .Active {
+  font-weight: 900;
+}
+
+.Docs {
+  margin-top: 30px;
+}
+.Docs h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+}
+.Docs p {
+  color: #ffffff;
+  margin-top: 30px;
+}
+.Docs h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #636363;
+  margin-top: 20px;
+}
+.Docs .DocInfo {
+  background-color: #101010;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 60px;
+  border: 1px solid rgba(166, 145, 143, 0.16);
+}
+.Docs .DocInfo p {
+  margin-top: 0px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 14px;
+}
+.Docs .DocInfo img {
+  width: 40px;
+  height: auto;
+}
+.Docs .DocImg {
+  background-color: #070707;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #636363;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.Docs .DocImg img {
+  margin-top: 16px;
+}
+
+.Project {
+  padding: 40px;
+}
+.Project p {
+  margin-top: 20px;
+}
+.Project button {
+  min-width: 210px;
+}
+
+.AboutHero {
+  background-image: url(../img/aboutbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0, 0, 0, 0.44);
+}
+
+.AboutImage {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.AboutBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=style.css.map */

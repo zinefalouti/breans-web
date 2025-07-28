@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+//Colors
+$White: #ffffff;
+$BG-Color: #131313;
+$Highlight: #A6918F;
+$DarkGray: #454545;
+$GrayText: #636363;
+$Black : #070707;
+
+@mixin divMaker($padding, $margin){
+    padding:$padding;
+    margin:$margin;
+}
+
+@mixin FontMaker($fontsize, $fontweight, $color){
+    font-size:$fontsize;
+    font-weight:$fontweight;
+    color:$color;
+}
+
+@mixin Transition($time){
+    transition: $time ease-in-out;
+}
+
+@mixin ButtonMaker($padding, $margin, $background, $HoverColor){
+    padding: $padding;
+    margin: $margin;
+    background-color: $background;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $HoverColor;
+        @include Transition(0.3s);
+    }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    color: $White;
+    background-color: $BG-Color;
+}
+
+.Header{
+    @include divMaker(40px 0px 20px 0px, 0px);
+
+    ul{
+            list-style: none;  
+            padding: 0;        
+            margin: 0;       
+            display: flex;
+            gap:40px;
+            flex-wrap: wrap;  
+            
+            li{
+                 display: flex;
+                 align-items: center;
+                 @include FontMaker(14px, 400 , $White);
+
+                 &:Hover{
+                    color:$Highlight;
+                    font-weight:700;
+                    @include Transition(0.3s);
+                 }
+
+                 
+            }
+
+            .Active{
+                    font-weight:700;
+        }
+    }
+
+    .Logo{
+        width:93%;
+
+        @media (max-width: 768px) {
+            width:100%;
+        }
+    }
+
+    button{
+        @include ButtonMaker(10px 20px 10px 20px,0px, $Highlight, $White);
+        width:60%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        @include FontMaker(14px,700 , $BG-Color );
+
+        @media (max-width: 1280px) {
+            width:100%;
+        }
+
+        img{
+            width:20px;
+        }
+    }
+
+    .MobileMenu{
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+}
+
+.Hero{
+    background-image: url('../img/gridbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:60px 60px 60px 60px;
+    text-align: center;
+
+     @media (max-width: 768px) {
+            padding:60px 20px 60px 20px;
+    }
+
+    h1{
+         @include FontMaker(40px, 300 ,$White );
+         margin-top:3%;
+
+         span{
+            color:$Highlight;
+            font-weight:900;
+         }
+    }
+
+    h2{
+        @include FontMaker(20px,300,$White );
+        margin-top:10px;
+    }
+
+    h3{
+        @include FontMaker(14px,900 , $DarkGray );
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top:30px;
+    }
+}
+
+.Hero-Action{
+    display:flex;
+    justify-content: center;
+    gap:40px;
+    align-items: center;
+
+    button{
+        min-width:190px;
+    }
+
+    text-align: center;
+}
+
+
+.btn-main{
+    @include ButtonMaker(10px 20px 10px 20px,0px, $Highlight , $White);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    @include FontMaker(14px,700 ,$BG-Color );
+
+    img{
+        width:20px;
+    }
+}
+
+.btn-secondary{
+    background-color: none;
+    border:2px solid $Highlight;
+    border-radius:5px;
+    @include FontMaker(14px,700 ,$Highlight);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+
+    &:hover{
+        background-color: $Highlight;
+        color:$BG-Color;
+        @include Transition(0.3s);
+
+        img{
+            background-color: $BG-Color;
+        }
+    }
+
+    img{
+        width:20px;
+    }
+}
+
+h1{
+         @include FontMaker(40px, 300 ,$White );
+
+         span{
+            color:$White;
+            font-weight:900;
+         }
+    }
+
+p{
+    @include FontMaker(16px,400 ,$GrayText );
+}
+
+.Hero-Banner{
+
+    background-image:url('../img/bgbrain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    padding:40px;
+    margin-top:60px;
+    border-radius:10px;
+    box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    text-align:center;
+
+    h1{
+        font-size:32px;
+    }
+
+    .Hero-Version{
+
+        margin-top:20px;
+        background-color: $BG-Color;
+        padding:10px 30px 10px 30px;
+        border-radius: 40px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+        flex-wrap: wrap;
+
+        img{
+            width:40px;
+        }
+
+        h3{
+            @include FontMaker(14px,700 ,$DarkGray );
+            text-transform: uppercase;
+
+            span{
+                font-weight:900;
+                color:$Highlight;
+            }
+        }
+    }
+    
+}
+
+.Block{
+    background-color: $Black;
+    padding:20px;
+    border-radius: 10px;
+    border:2px solid rgba(166, 145, 143, 0.16);
+    margin-top:30px;
+    box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+
+    &:hover{
+        border:2px solid rgba(166, 145, 143, 0.33);;
+        @include Transition(0.3s);
+    }
+
+    .Block-Head{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap:20px;
+        flex-wrap:wrap;
+        margin-bottom:10px;
+
+        h3{
+            @include FontMaker(12px,900 ,$GrayText );
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin:0;
+        }
+
+        img{
+            width:30px;
+        }
+
+        
+    }
+
+    h1{
+            font-size:24px;
+    }
+
+    .Block-Icon{
+        margin:16px 0px 16px 0px;
+        width:50%;
+        height:auto;
+    }
+
+    p{
+        @include FontMaker(16px,400 ,$GrayText );
+        margin-bottom:30px;
+    }
+    
+}
+
+.Link-Btn{
+    @include ButtonMaker(10px 20px 10px 20px,0px, $Highlight , $White);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    @include FontMaker(14px,700 ,$BG-Color );
+
+    img{
+        width:20px;
+    }
+}
+
+
+.HSectTitle{
+
+    margin-top:40px;
+
+    h3{
+        @include FontMaker(12px, 900 , $GrayText);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    h1{
+        @include FontMaker(32px,300 , $White);
+    }
+}
+
+
+/* Background */
+pre {
+  background-color: $Black;
+  color: #d4d4d4; /* default text color */
+  margin-top:30px;
+  border-radius: 10px;
+  border:2px solid rgba(166, 145, 143, 0.16);
+  box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+  -webkit-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+  -moz-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+
+    &:hover{
+        border:2px solid rgba(166, 145, 143, 0.33);;
+        @include Transition(0.3s);
+    }
+}
+
+
+.HSectImg{
+    width:100%;
+}
+
+
+.PreFooter{
+    background-image: url('../img/footerbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:30px;
+    margin:90px 0px 30px 0px;
+    border-radius:10px;
+    text-align: center;
+    box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+}
+
+.Footer{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        width:30%;
+        height:auto;
+    }
+
+    .Copyright{
+        margin-top:30px;
+        margin-bottom:30px;
+        @include FontMaker(14px,700 ,$White );
+
+        span{
+            font-weight:300;
+        }
+    }
+
+}
+
+.InnerHero{
+    margin-top:60px;
+    margin-bottom:20px;
+
+    h1{
+        span{
+            color:$Highlight;
+        }
+    }
+
+    p{
+        font-size:20px;
+    }
+
+    .InnerHeroAction{
+        display:flex;
+        gap:30px;
+        flex-wrap:wrap;
+        margin-top:40px;
+    }
+
+    button{
+        min-width:210px;
+    }
+
+    
+}
+
+hr{
+        border-color: #242424;
+    }
+
+.BackBtn{
+    width:50px;
+
+    &:hover{
+        scale:1.13;
+        @include Transition(0.3s);
+    }
+}
+
+.DocTable{
+    background-color: $Black;
+    padding:40px;
+    border-radius: 10px;
+    border:2px solid rgba(166, 145, 143, 0.16);
+    margin-top:30px;
+    box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    position:sticky;
+
+    ul{
+        li{
+            margin-bottom:30px;
+
+            a{
+
+                &:hover{
+                    font-weight:900;
+                    @include Transition(0.3s);
+                }
+            }
+
+            button{
+                &:hover{
+                    font-weight:900;
+                    @include Transition(0.3s);
+                }
+            }
+        }
+
+        .Active{
+            font-weight:900;
+        }
+    }
+}
+
+.Docs{
+    margin-top:30px;
+
+    h2{
+        @include FontMaker(32px,900 ,$White );
+    }
+
+    p{
+        color:$White;
+        margin-top:30px;
+    }
+
+    h3{
+        @include FontMaker(16px, 700, $GrayText);
+        margin-top:20px;
+    }
+
+    .DocInfo{
+        background-color: #101010;
+        padding:10px 20px 10px 20px;
+        margin-top: 20px;
+        display:flex;
+        gap:20px;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius:60px;
+        border:1px solid rgba(166, 145, 143, 0.16);
+
+        p{
+            margin-top: 0px;
+            font-weight:400;
+            color:$White;
+            font-size:14px;
+        }
+
+        img{
+            width:40px;
+            height:auto;
+        }
+    }
+
+    .DocImg{
+        background-color: $Black;
+        padding:20px;
+        border-radius: 10px;
+        margin-top: 30px;
+        @include FontMaker(14px, 900 , $GrayText );
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        img{
+            margin-top:16px;
+        }
+    }
+}
+
+.Project{
+    padding:40px;
+
+    p{
+        margin-top:20px;
+    }
+
+    button{
+        min-width:210px;
+    }
+}
+
+.AboutHero{
+    background-image: url(../img/aboutbg.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+    margin-top:60px;
+    box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -webkit-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: -6px 5px 32px 0px rgba(0,0,0,0.44);
+}
+
+.AboutImage{
+    margin-top:40px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.AboutBlock{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
