@@ -11,7 +11,7 @@ function Header({ activeIndex = 0 }) {
     { label: 'Quickstart', path: '/docs' },
     { label: 'Examples', path: '/examples' },
     { label: 'About', path: '/about' },
-    { label: 'Contact', path: 'mailto:support@example.com' }, // external link or route
+    { label: 'Contact', path: 'mailto:zine.falouti@gmail.com' }, // external link or route
   ];
 
   return (
