@@ -30,7 +30,11 @@ function Hero() {
            </div>
         </div>
         <div className="col-span-12 xl:col-span-10 xl:col-start-2">
+             
           <div className="Hero-Banner">
+            <div className="Hero-Version w-fit justify-self-center mb-2">
+               <h3><span>V 1.1.2 Available Now</span></h3>
+            </div>
             <h1><span>Breans</span> is fully compatible with the <span>latest</span> Java releases.</h1>
 
             <div className="Hero-Version w-fit justify-self-center">

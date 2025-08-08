@@ -6,6 +6,7 @@ import Project from '../comps/ExampleBlock';
 import Prj1 from '../img/prj1.png';
 import Prj2 from '../img/prj2.png';
 import Prj3 from '../img/prj3.png';
+import Prj4 from '../img/prj4.png';
 
 function Examples() {
   return (
@@ -47,6 +48,17 @@ function Examples() {
          of weather conditions over time. It showcases how Markov Chains can capture temporal dependencies in categorical data."
          link="https://github.com/zinefalouti/breans-examples/tree/main/example3"
          img={Prj3}
+      />
+
+      <Project
+         title="Air Quality"
+         subtitle="USES BREANS Data Analyzer"
+         content="This example demonstrates how to use Breans DataAnalyzer to perform basic exploration of 
+         a dataset containing air quality, pollution, and respiratory health data. It displays the dataset's 
+         head, tail, and statistical summary, applies label encoding to a selected categorical column, and 
+         generates a concise report. The modified dataset is then saved as a new CSV file."
+         link="https://github.com/zinefalouti/breans-examples/tree/main/example4"
+         img={Prj4}
       />
 
       <Footer/>

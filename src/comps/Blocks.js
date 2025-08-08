@@ -6,11 +6,13 @@ import LogRegIcon from '../img/logregicon.png';
 import KMeanIcon from '../img/kmeanicon.png';
 import MarkovIcon from '../img/markovicon.png';
 import TreeIcon from '../img/treeicon.png';
+import NavIcon from '../img/navigateicon.png';
+import DataIcon from '../img/datacheckicon.png';
 
 function Blocks() {
   return (
-    <div className="grid grid-cols-12 gap-4 mt-16">
-         <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+    <div className="grid grid-cols-12 gap-4 mt-16 items-stretch">
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <Block
               title="Neural Networks"
               subtitle="DEEP LEARNING"
@@ -21,7 +23,7 @@ function Blocks() {
               link="/neuralnetwork"
             />
          </div>
-         <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <Block
               title="Linear Regression"
               subtitle="REGRESSION"
@@ -33,7 +35,7 @@ function Blocks() {
               link="/linearregression"
             />
          </div>
-         <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <Block
               title="Logistic Regression"
               subtitle="CLASSIFICATION"
@@ -44,7 +46,7 @@ function Blocks() {
               link="/logisticregression"
             />
          </div>
-         <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <Block
               title="K-Means"
               subtitle="CLUSTERING"
@@ -55,7 +57,7 @@ function Blocks() {
               link="/kmeans"
             />
          </div>
-         <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <Block
               title="Markov Chains"
               subtitle="Stochastic"
@@ -66,7 +68,7 @@ function Blocks() {
               link="/markovchain"
             />
          </div>
-         <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <Block
               title="Behavior Trees"
               subtitle="AI BEHAVIOR"
@@ -75,6 +77,28 @@ function Blocks() {
               actions, and timers."
               icon={TreeIcon}
               link="/behaviortree"
+            />
+         </div>
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
+            <Block
+              title="Multi-Step Navigation"
+              subtitle="A Star Navigator"
+              content="The Navigator provides core pathfinding logic, enabling movement across a grid with customizable rules, 
+              obstacles, and tile-based optimizations. It is designed to support both single-path and multi-step navigation routines, 
+              including visual output for debugging and analysis."
+              icon={NavIcon}
+              link="/navigator"
+            />
+         </div>
+         <div className="col-span-12 lg:col-span-6 xl:col-span-3">
+            <Block
+              title="Data Analyzer"
+              subtitle="Data Analysis"
+              content="The Data Analyzer is a utility for performing essential data exploration and transformation 
+              tasks on datasets stored in CSV format. It includes methods for reading data, inspecting shapes, 
+              detecting missing values, generating statistical summaries, visualizing data using bar charts, and exporting reports."
+              icon={DataIcon}
+              link="/datacheck"
             />
          </div>
     </div>

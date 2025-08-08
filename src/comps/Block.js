@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 function Block({title,subtitle,content,icon,link}) {
   return (
-    <div className="Block">
+    <div className="Block h-full">
         <div className="Block-Head">
             <img src={BreanIcon} alt="Breans Icon"/>
             <h3>{subtitle}</h3>
